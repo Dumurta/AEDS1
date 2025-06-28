@@ -1,0 +1,1 @@
+Theldo, não consegui entender o que foi pedido no Extra02, logo não enviei ele neste Estudo dirigido. Caso seja possível explicar este exercício em aula ou pela correção desta atividade, eu agradeço.
