@@ -1,3 +1,7 @@
+/*
+    Contato.hpp - v1.1.0
+    Author: Eduardo Murta De Abreu - 884985
+*/
 #ifndef CONTATO_H_
 #define _CONTATO_H_
 

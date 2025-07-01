@@ -1,3 +1,7 @@
+/*
+    ContatoExtra.hpp - v1.1.0
+    Author: Eduardo Murta De Abreu - 884985
+*/
 #ifndef _CONTATOPLUS_H_
 #define _CONTATOPLUS_H_
 
@@ -15,7 +19,7 @@ public:
     ContatoPlus() : ContatoEx()
     {
         foneCount = 0;
-        for (int i = 0; i < 10; ++i)
+        for (int i = 0; i < 10; i = i + 1)
         {
             telefones[i] = "";
         }
@@ -28,7 +32,7 @@ public:
         if (foneCount < 10 && foneValido(novoFone))
         {
             telefones[foneCount] = novoFone;
-            foneCount++;
+            foneCount = foneCount + 1;
             return true;
         }
         return false;
@@ -72,7 +76,7 @@ public:
     {
         std::string result = "{" + getNome() + "\n";
         result += " Fones: ";
-        for (int i = 0; i < foneCount; ++i)
+        for (int i = 0; i < foneCount; i = i + 1)
         {
             result += telefones[i] + (i == foneCount - 1 ? "" : ", ");
         }
@@ -95,7 +99,7 @@ public:
         {
             afile << getNome() << std::endl;
             afile << getFoneCount() << std::endl;
-            for (int i = 0; i < getFoneCount(); ++i)
+            for (int i = 0; i < getFoneCount(); i = i + 1)
             {
                 afile << getFone(i) << std::endl;
             }
@@ -121,7 +125,7 @@ public:
             std::getline(afile, temp); 
 
             foneCount = 0;
-            for(int i = 0; i < n_fones; ++i)
+            for(int i = 0; i < n_fones; i = i + 1)
             {
                 std::getline(afile, temp);
                 addFone(temp);

@@ -1,3 +1,7 @@
+/*
+    Erro.hpp - v1.1.0
+    Author: Eduardo Murta De Abreu - 884985
+*/
 #ifndef _ERRO_H_
 #define _ERRO_H_
 

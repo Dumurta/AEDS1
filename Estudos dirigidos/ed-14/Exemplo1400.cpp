@@ -1,5 +1,5 @@
 /*
-    Exemplo1400.cpp - v1.0.0
+    Exemplo1400.cpp - v1.1.0
     Author: Eduardo Murta De Abreu - 884985
 */
 
@@ -102,7 +102,7 @@ void method_10()
     int n = s1.split(palavras);
     std::cout << "String: \"" << s1.getContent() << "\"" << std::endl;
     std::cout << "Foram encontradas " << n << " palavras:" << std::endl;
-    for(int i=0; i<n; ++i) {
+    for(int i=0; i<n; i = i + 1) {
         std::cout << i+1 << ": " << palavras[i] << std::endl;
     }
 }
@@ -149,46 +149,3 @@ int main()
 
     return 0;
 }
-
-/*
-----------------------------------------------
-END-OF-FILE: Exemplo1400.cpp
-----------------------------------------------
-DOCUMENTACAO DE TESTES:
-Metodo 01: Saida esperada:
-    s1("1234") -> 1234 | Erro: 0
-    s2("-567") -> -567 | Erro: 0
-    s3("abc") -> -1 | Erro: [ERRO] Conteudo nao representa um valor inteiro.
-    s4("12a34") -> -1 | Erro: [ERRO] Conteudo nao representa um valor inteiro.
-Metodo 02: Saida esperada:
-    s1("123.45") -> 123.45 | Erro: 0
-    s2("-56.7") -> -56.7 | Erro: 0
-    s3("1.2.3") -> 0 | Erro: [ERRO] Conteudo nao representa um valor real.
-    s4("xyz") -> 0 | Erro: [ERRO] Conteudo nao representa um valor real.
-Metodo 03: Saida esperada:
-    s1("true") -> true | Erro: 0
-    s2("F") -> false | Erro: 0
-    s3("0") -> false | Erro: 0
-    s4("invalido") -> false | Erro: [ERRO] Conteudo nao representa um valor logico.
-Metodo 04: Saida esperada:
-    s1("o rato roeu a roupa") contem "roeu"? -> true
-    s1("o rato roeu a roupa") contem "gato"? -> false
-Metodo 05: Saida esperada:
-    s1("Teste em Minusculas") -> TESTE EM MINUSCULAS
-Metodo 06: Saida esperada:
-    s1("TESTE EM MAIUSCULAS") -> teste em maiusculas
-Metodo 07: Saida esperada:
-    s1("banana").replace('a', 'o') -> bonono
-Metodo 08: Saida esperada (chave=3):
-    s1("abc xyz").encrypt(3) -> def abc
-Metodo 09: Saida esperada (chave=3):
-    s1("def abc").decrypt(3) -> abc xyz
-Metodo 10: Saida esperada:
-    String: "um dois tres quatro"
-    Foram encontradas 4 palavras:
-    1: um
-    2: dois
-    3: tres
-    4: quatro
-----------------------------------------------
-*/

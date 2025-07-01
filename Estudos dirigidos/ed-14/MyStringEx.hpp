@@ -1,5 +1,5 @@
 /*
-    MyStringEx.hpp - v1.0.0
+    MyStringEx.hpp - v1.1.0
     Author: Eduardo Murta De Abreu - 884985
 */
 
@@ -37,7 +37,7 @@ public:
             return -1;
         }
 
-        for (int i = start; i < content.length(); ++i)
+        for (int i = start; i < content.length(); i = i + 1)
         {
             if (content[i] >= '0' && content[i] <= '9')
             {
@@ -79,13 +79,13 @@ public:
             return 0.0;
         }
 
-        for (int i = start; i < content.length(); ++i)
+        for (int i = start; i < content.length(); i = i + 1)
         {
             if (content[i] >= '0' && content[i] <= '9')
             {
                 if (hasDecimal)
                 {
-                    divisor *= 10.0;
+                    divisor = divisor * 10.0;
                     fraction = fraction * 10.0 + (content[i] - '0');
                 }
                 else
@@ -128,10 +128,10 @@ public:
         {
             return false;
         }
-        for (int i = 0; i <= content.length() - subtexto.length(); ++i)
+        for (int i = 0; i <= content.length() - subtexto.length(); i = i + 1)
         {
             bool match = true;
-            for (int j = 0; j < subtexto.length(); ++j)
+            for (int j = 0; j < subtexto.length(); j = j + 1)
             {
                 if (content[i + j] != subtexto[j])
                 {
@@ -150,7 +150,7 @@ public:
     std::string toUpperCase()
     {
         std::string result = content;
-        for (int i = 0; i < result.length(); ++i)
+        for (int i = 0; i < result.length(); i = i + 1)
         {
             if (result[i] >= 'a' && result[i] <= 'z')
             {
@@ -163,7 +163,7 @@ public:
     std::string toLowerCase()
     {
         std::string result = content;
-        for (int i = 0; i < result.length(); ++i)
+        for (int i = 0; i < result.length(); i = i + 1)
         {
             if (result[i] >= 'A' && result[i] <= 'Z')
             {
@@ -176,7 +176,7 @@ public:
     std::string replace(char original, char novo)
     {
         std::string result = content;
-        for (int i = 0; i < result.length(); ++i)
+        for (int i = 0; i < result.length(); i = i + 1)
         {
             if (result[i] == original)
             {
@@ -189,7 +189,7 @@ public:
     std::string encrypt(int key)
     {
         std::string result = content;
-        for (int i = 0; i < result.length(); ++i)
+        for (int i = 0; i < result.length(); i = i + 1)
         {
             if (result[i] >= 'a' && result[i] <= 'z')
             {
@@ -206,7 +206,7 @@ public:
     std::string decrypt(int key)
     {
         std::string result = content;
-        for (int i = 0; i < result.length(); ++i)
+        for (int i = 0; i < result.length(); i = i + 1)
         {
             if (result[i] >= 'a' && result[i] <= 'z')
             {
@@ -226,14 +226,14 @@ public:
         std::string buffer = "";
         std::string text = content + " ";
 
-        for (int i = 0; i < text.length(); ++i)
+        for (int i = 0; i < text.length(); i = i + 1)
         {
             if (text[i] == ' ' || text[i] == '\t' || text[i] == '\n')
             {
                 if (buffer.length() > 0)
                 {
                     sequencia[count] = buffer;
-                    count++;
+                    count = count + 1;
                     buffer = "";
                 }
             }

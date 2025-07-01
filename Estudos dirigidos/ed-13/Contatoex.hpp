@@ -1,3 +1,7 @@
+/*
+    ContatoEx.hpp - v1.1.0
+    Author: Eduardo Murta De Abreu - 884985
+*/
 #ifndef _CONTATOEX_H_
 #define _CONTATOEX_H_
 
@@ -34,7 +38,7 @@ protected:
             return false;
         }
 
-        for (int i = 0; i < 14; ++i)
+        for (int i = 0; i < 14; i = i + 1)
         {
             if (i == 0 || i == 3 || i == 9)
             {
@@ -135,9 +139,9 @@ public:
     {
         int count = 0;
         if (!getFone().empty())
-            count++;
+            count = count + 1;
         if (!fone2.empty())
-            count++;
+            count = count + 1;
         return count;
     }
 
