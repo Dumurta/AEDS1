@@ -44,6 +44,14 @@ void method_02()
     // identificar
     cout << endl
          << "Method_02 - v0.0" << endl;
+
+    Array<int> int_array(5, 0);
+
+    int_array.read();
+
+    int_array.print();
+
+    int_array.free();
     // encerrar
     pause("Apertar ENTER para continuar");
 } // end method_02 ( )
@@ -55,6 +63,13 @@ void method_03()
     // identificar
     cout << endl
          << "Method_03 - v0.0" << endl;
+
+    Array<int> int_array(5, 0);
+
+    int_array.read();
+    int_array.fprint("INT_ARRAY.TXT");
+
+    int_array.free();
     // encerrar
     pause("Apertar ENTER para continuar");
 } // end method_03 ( )
@@ -66,6 +81,12 @@ void method_04()
     // identificar
     cout << endl
          << "Method_04 - v0.0" << endl;
+    Array<int> int_array(5, 0);
+
+    int_array.fread("INT_ARRAY.TXT");
+
+    int_array.print();
+    int_array.free();
     // encerrar
     pause("Apertar ENTER para continuar");
 } // end method_04 ( )

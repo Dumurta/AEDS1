@@ -61,6 +61,17 @@ public:
         }
     }
 
+    void read()
+    {
+        cout << endl;
+        for (int x = 0; x < length; x = x + 1)
+        {
+            cout << setw(3) << x << " : ";
+            cin >> data[x];
+        }
+        cout << endl;
+    }
+
     T get(int position)
     {
         T value = optional;
@@ -83,6 +94,43 @@ public:
                  << endl;
         } // end for
         cout << endl;
+    }
+
+    void fprint(string fileName)
+    {
+        ofstream afile;
+
+        afile.open(fileName);
+        afile << length << endl;
+        for (int x = 0; x < length; x = x + 1)
+        {
+            afile << data[x] << endl;
+        }
+        afile.close();
+    }
+
+    void fread(string fileName)
+    {
+        ifstream afile;
+        afile.open(fileName);
+        int n = 0;
+        afile >> n;
+        if (n < 0)
+        {
+            cout << "ERROR";
+        }
+        else
+        {
+            length = n;
+
+            data = new T[n];
+
+            for (int x = 0; x < length; x = x + 1)
+            {
+                afile >> data[x];
+            }
+            afile.close();
+        }
     }
 };
 
